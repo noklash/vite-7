@@ -7,9 +7,10 @@ function App() {
 
   return (
     <>
+      {logo}
       <h1 className="text-3xl font-bold underline">
       Hello world!
-      {logo}
+      
     </h1>
     </>
   )
