@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.landing-body{
+background-image: url(./images/mobile/image-hero.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 100%;
+}
+
+@media(min-width: 470px){
+    .landing-body{
+        background-image: url(./images/Desktop/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+}
+/* overlay of navbar starts here */
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0);
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+}
+
+.overlay-content{
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: .4rem;
+    /* margin-right: 1rem; */
+
+}
+
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color:#ebe1e1;
+    display: block;
+    transition: 0.3s;
+}
+.a-block{
+    margin-top: 2.5rem;
+}

@@ -1,19 +1,16 @@
 
 import './App.css'
-import  Logo from "./images/logo.svg";
+import Landing from './Landing'
 
 function App() {
   
 
   return (
-    <div className="bg-black">
+    <div className="m-0">
       
+      <Landing/>
       
-      <h1 className="text-3xl text-white font-bold underline">
-      Hello world!
-      
-    </h1>
-    <img src={Logo}/>
+    
     </div>
   )
 }
