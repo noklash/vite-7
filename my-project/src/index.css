@@ -96,3 +96,28 @@ height: 100vh;
     }
 }
 
+.write-up > h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media(min-width:470px){
+   .page--body{
+    display: flex;
+   } 
+   .img-container{
+    width:60vw;
+    height:100%;
+   }
+   .write-up{
+    width:45%;
+    margin-top: 8rem;
+    margin-left: -10rem;
+   }
+   .write-up > h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+}
