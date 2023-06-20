@@ -2,6 +2,7 @@ import React from "react";
 import  Logo from "./images/logo.svg";
 import Hamburger from "./images/icon-hamburger.svg"
 import CloseSvg from "./images/icon-close.svg"
+import Hero from "./Hero";
 
 export default function Landing(){
     const screenWidth = window.innerWidth
@@ -43,17 +44,17 @@ export default function Landing(){
         </div>
 
             {screen > 470 && <ul className="text-white flex p-4 mx-1">
-                <li className="mx-1">About</li>
-                <li className="mx-1">Careers</li>
-                <li className="mx-1">Events</li>
-                <li className="mx-1">Products</li>
-                <li className="mx-1">Support</li>
+                <li className="mx-2">About</li>
+                <li className="mx-2">Careers</li>
+                <li className="mx-2">Events</li>
+                <li className="mx-2">Products</li>
+                <li className="mx-2">Support</li>
             </ul>}
 
             </div>
   
   
-  
+            <Hero screen={screen}/>
   
         </div>
     )
