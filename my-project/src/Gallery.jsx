@@ -18,12 +18,31 @@ import DesktopSoccerTeam from "./images/desktop/image-soccer-team.jpg";
 
 export default function Gallery(props){
 // ARRANGED THE DESTOP AND MOBILE IMAGES IN AN ARRAY
-    const imagesMobile = [MobileCuriosity, MobileDeepEarth, MoblieFisheye, MobileFromAbove, MobileGrid, MobileNightArcade, MobilePocket, MobileSoccerTeam]
-    const imagesDesktop = [DesktopCuriosity, DesktopDeepEarth, DesktopFisheye, DesktopFromAbove, DesktopGrid, DesktopNightArcade, DesktopPocket, DesktopSoccerTeam]
+    const imagesMobile = [
+        {"title":"THE CURIOSITY", "src":MobileCuriosity, "key": 1},
+         {"title": "DEEP EARTH", "src":MobileDeepEarth, "key": 2}, 
+         {"title": "MAKE IT FISH EYE", "src":MoblieFisheye, "key": 3},
+         {"title": "FROM ABOVE", "src":MobileFromAbove, "key": 4},
+         {"title": "THE GRID", "src":MobileGrid, "key": 5},
+         {"title": "NIGHT ARCADE", "src":MobileNightArcade, "key": 6},
+         {"title": "POCKET BOREALIS", "src":MobilePocket, "key": 7},
+         {"title": "SOCCER TEAM VR", "src":MobileSoccerTeam, "key": 8}
+     ]
+    const imagesDesktop = [
+        {"title":"THE CURIOSITY", "src":DesktopCuriosity , "key": 1},
+         {"title": "DEEP EARTH", "src":DesktopDeepEarth , "key": 2}, 
+         {"title": "MAKE IT FISH EYE", "src":DesktopFisheye , "key": 3},
+         {"title": "FROM ABOVE", "src":DesktopFromAbove, "key": 4},
+         {"title": "THE GRID", "src":DesktopGrid, "key": 5 },
+         {"title": "NIGHT ARCADE", "src":DesktopNightArcade, "key": 6},
+         {"title": "POCKET BOREALIS", "src":DesktopPocket, "key": 7},
+         {"title": "SOCCER TEAM VR", "src":DesktopSoccerTeam, "key": 8}
+     ]
+    
     const screenSize = props.screen > 470 ? imagesDesktop : imagesMobile
     const imgs = screenSize.map((each) => {
         
-        return <div className="p-1 m-2 img-div" id=""> <img src={each}/> </div>
+        return <div className="p-1 m-2 img-div" id=""> <img src={each.src} key={each.key}/>  <div className="img--title text-center text-white">{each.title}</div></div> 
     })
     
     return(
