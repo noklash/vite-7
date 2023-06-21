@@ -42,7 +42,7 @@ export default function Gallery(props){
     const screenSize = props.screen > 470 ? imagesDesktop : imagesMobile
     const imgs = screenSize.map((each) => {
         
-        return <div className="p-1 m-2 img-div" id=""> <img src={each.src} key={each.key}/>  <div className="img--title text-center text-white">{each.title}</div></div> 
+        return <div className="p-1 m-2 img-div" key={each.key}> <img src={each.src} key={each.key}/>  <div className="img--title text-center text-white">{each.title}</div></div> 
     })
     
     return(
