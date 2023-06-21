@@ -8,6 +8,12 @@ export default function Page(){
 
     const screenWidth = window.innerWidth
     const [screen, setScreen] = React.useState(screenWidth)
+    const [show, setShow] = React.useState(false)
+
+
+    function toggleImage(){
+        setShow((prev)=> !prev)
+    }
 
     window.addEventListener('resize', ()=>setScreen(window.innerWidth))
 
@@ -31,11 +37,11 @@ export default function Page(){
             <div className="creations mt-8">
                 <div className="creation--head">
                     <h2 className="mr-auto creation-h">OUR CREATIONS</h2>
-                    <button className="all">SEE ALL</button>
+                    <button className="all hover:bg-black hover:text-white"  onClick={toggleImage}>{show ? "HIDE" : "SEE ALL"}</button>
                 </div>
             </div>
 
-            <Gallery screen={screen}/>
+            {show && <Gallery screen={screen}/>}
             </div>
             
     )
