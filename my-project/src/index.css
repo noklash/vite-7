@@ -16,6 +16,29 @@ background-size: cover;
 height: 100vh;
 }
 
+.d-nav > li{
+    position: relative;
+    cursor: pointer;
+}
+.d-nav > li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: #ebe1e1;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+    
+
+}
+
+.d-nav > li:hover::after{
+    width: 80%;
+    text-align: center;
+}
+
 @media(min-width: 470px){
     .landing-body{
         background-image: url(./images/Desktop/image-hero.jpg);

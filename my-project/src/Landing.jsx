@@ -43,7 +43,7 @@ export default function Landing(){
             </div>
         </div>
 
-            {screen > 470 && <ul className="text-white flex p-4 mx-1">
+            {screen > 470 && <ul className="text-white flex p-4 mx-1 d-nav">
                 <li className="mx-2">About</li>
                 <li className="mx-2">Careers</li>
                 <li className="mx-2">Events</li>
