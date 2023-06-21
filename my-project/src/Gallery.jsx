@@ -20,10 +20,15 @@ export default function Gallery(props){
 // ARRANGED THE DESTOP AND MOBILE IMAGES IN AN ARRAY
     const imagesMobile = [MobileCuriosity, MobileDeepEarth, MoblieFisheye, MobileFromAbove, MobileGrid, MobileNightArcade, MobilePocket, MobileSoccerTeam]
     const imagesDesktop = [DesktopCuriosity, DesktopDeepEarth, DesktopFisheye, DesktopFromAbove, DesktopGrid, DesktopNightArcade, DesktopPocket, DesktopSoccerTeam]
-
+    const screenSize = props.screen > 470 ? imagesDesktop : imagesMobile
+    const imgs = screenSize.map((each) => {
+        
+        return <div className="p-1 m-2 img-div" id=""> <img src={each}/> </div>
+    })
+    
     return(
-        <div>
-
+        <div className="img-container">
+            {imgs}
         </div>
     )
 }
