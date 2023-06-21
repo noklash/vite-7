@@ -1,6 +1,8 @@
 import React from "react";
 import MobileInteractive from './images/mobile/image-interactive.jpg';
 import DesktopInteractive from './images/desktop/image-interactive.jpg';
+import Gallery from "./Gallery";
+
 
 export default function Page(){
 
@@ -11,8 +13,9 @@ export default function Page(){
 
    const  picture = screen > 470 ? DesktopInteractive : MobileInteractive
     return (
-
+    
         <div className="page--body m-10">
+            <div className="interactive">
             <div className="img-container">
                 <img src={picture} className="" />
             </div>
@@ -23,7 +26,17 @@ export default function Page(){
                     creations have transformed businesses through digital experiences that bind 
                     to their brand.</p>
             </div>
+            </div>
             
-        </div>
+            <div className="creations mt-8">
+                <div className="creation--head">
+                    <h2 className="mr-auto creation-h">OUR CREATIONS</h2>
+                    <button className="all">SEE ALL</button>
+                </div>
+            </div>
+
+            <Gallery screen={screen}/>
+            </div>
+            
     )
 }

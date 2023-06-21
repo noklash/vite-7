@@ -102,8 +102,22 @@ height: 100vh;
     text-align: center;
 }
 
+.all{
+    border: 1px solid black;
+    padding: 0.6rem 1.5rem;
+    
+}
+
+.creation-h{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.creation--head{
+    display: block;
+}
 @media(min-width:470px){
-   .page--body{
+   .interactive{
     display: flex;
    } 
    .img-container{
@@ -120,4 +134,16 @@ height: 100vh;
     font-weight: 400;
     text-align: center;
 }
+    .all{
+    border: 1px solid black;
+    padding: 0.6rem 1.5rem;
+    
 }
+
+.creation--head{
+    display: flex;
+}
+
+}
+
+
