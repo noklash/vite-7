@@ -118,7 +118,7 @@ height: 100vh;
 }
 
 .img-div{
-    width:10rem;
+    width:100%;
 }
 @media(min-width:470px){
    .interactive{
@@ -152,6 +152,10 @@ height: 100vh;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
+}
+
+.img-div{
+    width:10rem;
 }
 }
 

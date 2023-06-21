@@ -1,7 +1,9 @@
 
 import './App.css'
+import Footer from './Footer'
 import Landing from './Landing'
 import Page from './page'
+
 
 function App() {
   
@@ -11,7 +13,7 @@ function App() {
       
       <Landing/>
       <Page/>
-    
+      <Footer/>
     </div>
   )
 }
